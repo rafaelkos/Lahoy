@@ -26,12 +26,12 @@ function onClickSummoner(){
         invocadorProfileIconId = data.profileIconId
         invocadorLevel = data.summonerLevel
         $('#invocadorTabela > tbody').append(
-            '<tr><td>' + invocadorProfileIconId + '</td>',
+            '<td>' + invocadorProfileIconId + '</td>',
             '<td>' + invocadorLevel + '</td>',
-            '<td>' + summonerName + '</td></tr>',
-            '<tr><td>' + invocadorPuuid + '</td></tr>',
-            '<tr><td>' + invocadorSummonerId + '</td></tr>',
-            '<tr><td>' + invocadorAccountId + '</td></tr>'
+            '<td>' + summonerName + '</td>',
+            '<td>' + invocadorPuuid + '</td>',
+            '<td>' + invocadorSummonerId + '</td>',
+            '<td>' + invocadorAccountId + '</td>'
         )
     })
     console.log("invocadorPuuid " + invocadorPuuid)
