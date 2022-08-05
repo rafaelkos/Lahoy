@@ -48,13 +48,13 @@ body {
   
   h6 {
     padding: 5px;
-    font-family: arial;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
   }
   
   table {
     width: auto;
-    table-layout: auto;
+    table-layout: fixed;
     margin-left: 10%;
     margin-right: 10%;
     border: 2px solid black;
@@ -62,8 +62,8 @@ body {
   
   th, td {
     padding: 2px;
+    width: 100px;
     border-bottom: 2px solid black;
-    text-size-adjust:100%;
   }
   
   th {
@@ -76,9 +76,13 @@ body {
   }
   
   tr:hover {
-    background-color: darkgray;
+    background-color: rgb(221, 221, 221);
   }
-  
+
+  td:hover {
+    background-color: rgb(221, 221, 221);
+  }
+
   tr>:nth-child(1) {
     text-align: center;
   }
