@@ -1,5 +1,5 @@
 var riotToken = "RGAPI-323fb144-6cd3-4a21-973d-48a9280498bf"
-var puuidLahoy = ""
+var puuidLahoy = "A46wqieoS2TwQVmDczVXS0JF3eAjO5yKI6x--ZfPemtOTkPf0Dgm5-w01IopoCH7Wem2Bj0-cDsgUQ"
 function teste() {
     document.getElementById('teste1').innerHTML = 'Isto é um teste';
 }
