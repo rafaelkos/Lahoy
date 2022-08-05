@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Rafael</title>
+  <title>Rafael, Herói do Mundo!</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
@@ -13,7 +13,11 @@
 
 <body>
 
-  Sumoner Name: <input type="text" name="SumonerName" placeholder="Digite aqui">
+  <form name="getSummonerName" onSubmit="JavaScript:onClickSummoner(summonerName)">
+  <label for="summonerName">Summoner Name:</label>
+  <input type="text" id="summonerName" name="summonerName" placeholder="Summoner Name">
+  <input type="submit" value="Vai CARALHO!">
+  </form>
 
   <div class="row justify-content-center">
     <h6 id="teste1" class="col-lg-6 col-sm-4">
