@@ -3,28 +3,40 @@ var lahoyPuuid = "A46wqieoS2TwQVmDczVXS0JF3eAjO5yKI6x--ZfPemtOTkPf0Dgm5-w01IopoC
 var lahoySummonerId = "PqCUkydLgnv1hco2E0MxifjyC3fzcLFDBOF1P1aA3huSvGU6FYPJJPHUMg"
 var lahoyAccountId = "9PGOiIrjGayzgAoJKoZtiUJ1VifxAHE8wqPZwMq7GaOc3zhNNkQdfHtN"
 var lahoyProfileIconId = "903"
+var invocadorPuuid = ""
+var invocadorSummonerId = ""
+var invocadorAccountId = ""
+var invocadorProfileIconId = ""
+var invocadorLevel = ""
 
 
 function teste() {
-    document.getElementById('teste1').innerHTML = 'Isto é um teste';
+    let summonerName = document.getElementById("invocador").value
+    document.getElementById('teste1').innerHTML = 'Eureka!! a Palavra é: ' + summonerName;
 }
-var url = 'https://br1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=' + riotToken
-$.getJSON(url, function (data) {
-    $('#table1 > tbody').append('<tr><td>' + data.freeChampionIds + '</td></tr>')
-    
-});
-var summonerName = "Lahoy"
-var summonerInformationAPI = "https://br1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + summonerName + "?api_key=" + riotToken
-$.getJSON(summonerInformationAPI, function (data) {
-    
-    // console.log("summonerInformationHTML " + summonerInformationAPI);
-    // console.log("summonerInformationAPI " + data);
-})
 
-function onClickSummoner(summonerName){
+function onClickSummoner(){
+    let summonerName = document.getElementById("invocador").value
     summonerInformationAPI = "https://br1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + summonerName + "?api_key=" + riotToken
     console.log("summonerInformationHTML " + summonerInformationAPI);
     $.getJSON(summonerInformationAPI, function (data) {
-        // console.log("summonerInformationAPI " + data)
+        invocadorPuuid = data.puuid
+        invocadorSummonerId = data.id
+        invocadorAccountId = data.accountId
+        invocadorProfileIconId = data.profileIconId
+        invocadorLevel = data.summonerLevel
+        $('#invocadorTabela > tbody').append(
+            '<tr><td>' + invocadorProfileIconId + '</td>',
+            '<td>' + invocadorLevel + '</td>',
+            '<td>' + summonerName + '</td></tr>',
+            '<tr><td>' + invocadorPuuid + '</td></tr>',
+            '<tr><td>' + invocadorSummonerId + '</td></tr>',
+            '<tr><td>' + invocadorAccountId + '</td></tr>'
+        )
     })
+    console.log("invocadorPuuid " + invocadorPuuid)
+    console.log("invocadorSummonerId " + invocadorSummonerId)
+    console.log("invocadorAccountId " + invocadorAccountId)
+    console.log("invocadorProfileIconId " + invocadorProfileIconId)
+    console.log("invocadorLevel " + invocadorLevel)
 }

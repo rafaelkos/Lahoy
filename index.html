@@ -13,29 +13,32 @@
 
 <body>
 
-  <form name="getSummonerName" onSubmit="JavaScript:onClickSummoner(summonerName)">
-  <label for="summonerName">Summoner Name:</label>
-  <input type="text" id="summonerName" name="summonerName" placeholder="Summoner Name">
-  <input type="submit" value="Vai CARALHO!">
-  </form>
-
-  <div class="row justify-content-center">
-    <h6 id="teste1" class="col-lg-6 col-sm-4">
-      <script>
-        window.onload = teste();
-      </script>
-  </div>
+  <label for="invocador">Summoner Name:</label>
+  <input type="text" name="invocador" id="invocador" placeholder="Summoner Name">
+  <button type="button" onClick="onClickSummoner()">Vai TROLL!</button> 
   <div table>
-    <table id="table1">
+    <table id="invocadorTabela">
       <thead>
         <tr>
-          <th>Free Champion Ids</th>
+          <th>PROFILE ICON ID</th>
+          <th>LEVEL</th>
+          <th>INVOCADOR</th>
         </tr>
+        <tr><th>PUUID</th></tr>
+        <tr><th>SUMMONER ID</th></tr>
+        <tr><th>ACCOUNT ID</th></tr>
       </thead>
       <tbody>
       </tbody>
     </table>
+
+  <div class="row justify-content-center">
+    <h6 id="teste1" class="col-lg-6 col-sm-4">
+      <script>
+        window.onload = teste("essa é a inicial");
+      </script>
   </div>
+
 </body>
 
 </html>

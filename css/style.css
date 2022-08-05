@@ -1,0 +1,93 @@
+body {
+    background-color: gray;
+  }
+  
+  .row>div {
+    padding: 2px;
+    background-color: teal;
+    border: 2px solid black;
+  }
+  
+  a {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .container {
+    padding: 30px;
+  }
+  
+  #quoteDisplay {
+    display: block;
+    margin-top: 20px;
+  }
+  
+  .justify-content-center{
+    margin-top: 20px;
+  }
+  
+  .img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+  
+  h1 {
+    font-family: Cursive;
+    font-size: 48px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    padding: 5px;
+  }
+  
+  h6 {
+    padding: 5px;
+    font-family: arial;
+    font-size: 16px;
+  }
+  
+  table {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  th, td {
+    padding: 2px;
+    border-bottom: 1px solid black;
+  }
+  
+  th {
+    text-align: right;
+  }
+  
+  tr {
+    text-align: right;
+  }
+  
+  tr:hover {
+    background-color: darkgray;
+  }
+  
+  tr>:nth-child(1) {
+    text-align: center;
+  }
+  
+  @media only screen and (max-width: 660px) {
+    table {
+        font-size: 10px !important;
+    }
+  }
+  
+  @media only screen and (max-width: 575px) {
+    #quoteDisplay {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+  }
